@@ -1,0 +1,394 @@
+{
+  "today": "2026-09-22 (Tuesday)",
+  "me": {"name": "Sam Taylor", "email": "sam@example.com"},
+  "threads": [
+    {
+      "id": "p01",
+      "subject": "Case #SHP-44817: additional document needed",
+      "messages": [
+        {"from": "Parcel Claims Team <claims@swiftparcel.example>", "date": "2026-09-21 16:10", "text": "Hi Sam,\n\nThank you for reporting the damaged package (tracking 1Z84X20). To continue our investigation we need one more document: a copy of the purchase invoice showing the item value. Please upload it through the case page or reply to this email with the attachment within 5 business days, otherwise the case will be closed.\n\nKind regards,\nPriya, Claims Specialist"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "purchases", "next_step": "send_document"}
+    },
+    {
+      "id": "p02",
+      "subject": "We received your documents - Case #SHP-44790",
+      "messages": [
+        {"from": "SwiftParcel <no-reply@swiftparcel.example>", "date": "2026-09-20 09:02", "text": "This is an automated message. We have received the documents you uploaded for case #SHP-44790. No further action is required at this time. We will contact you if we need anything else. Typical review time is 7-10 business days."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "acknowledgement", "workflow": "purchases", "next_step": "none"}
+    },
+    {
+      "id": "p03",
+      "subject": "Your order has shipped!",
+      "messages": [
+        {"from": "HomeGoods Online <orders@homegoods.example>", "date": "2026-09-21 11:30", "text": "Good news! Your order #HG-20931 (ceramic table lamp, 2x linen cushion covers) has shipped. Estimated delivery: Thursday, Sep 24. Track your package here: https://homegoods.example/track/HG-20931"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "purchases", "next_step": "none"}
+    },
+    {
+      "id": "p04",
+      "subject": "Your return is approved - drop off by Sep 30",
+      "messages": [
+        {"from": "Stride Shoes <returns@strideshoes.example>", "date": "2026-09-19 14:00", "text": "Your return request for Trail Runner 2 (size 10) has been approved. Print the attached label and drop the package at any post office by September 30. Your refund will be issued once we receive the item. Returns dropped off after September 30 cannot be accepted."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": false, "kind": "new_request", "workflow": "purchases", "next_step": "complete_task"}
+    },
+    {
+      "id": "p05",
+      "subject": "Refund processed for order #BK-5512",
+      "messages": [
+        {"from": "PageTurner Books <support@pageturner.example>", "date": "2026-09-18 10:45", "text": "We've processed your refund of $23.40 for order #BK-5512. It may take 3-5 business days to appear on your statement. Thanks for shopping with us."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "purchases", "next_step": "none"}
+    },
+    {
+      "id": "p06",
+      "subject": "Action required: payment failed for your subscription",
+      "messages": [
+        {"from": "CloudPhotos Billing <billing@cloudphotos.example>", "date": "2026-09-22 07:15", "text": "We couldn't charge your card ending in 4421 for your CloudPhotos 2TB plan ($9.99). Please update your payment method by September 29 to avoid losing access to your storage. Update here: https://cloudphotos.example/billing"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": false, "kind": "new_request", "workflow": "purchases", "next_step": "pay"}
+    },
+    {
+      "id": "p07",
+      "subject": "48 hours only: 40% off everything",
+      "messages": [
+        {"from": "UrbanWear <deals@urbanwear.example>", "date": "2026-09-22 06:00", "text": "Our biggest sale of the season is here! Take 40% off sitewide with code FALL40. Ends Thursday at midnight. Shop new arrivals, jackets and more."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "purchases", "next_step": "none"}
+    },
+    {
+      "id": "p08",
+      "subject": "Question about your order - shipping address",
+      "messages": [
+        {"from": "Maria (VintageFinds seller) <maria@vintagefinds.example>", "date": "2026-09-21 19:22", "text": "Hi Sam, thanks for buying the vintage record player! Before I ship it, can you confirm your address? The one on the order is missing the apartment number. I'd like to send it out tomorrow if possible. Thanks, Maria"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "purchases", "next_step": "reply"}
+    },
+    {
+      "id": "p09",
+      "subject": "How was your recent purchase?",
+      "messages": [
+        {"from": "HomeGoods Online <feedback@homegoods.example>", "date": "2026-09-20 12:00", "text": "Hi Sam, we hope you're enjoying your order #HG-20877. Would you take 1 minute to leave a review? Your feedback helps other shoppers."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "purchases", "next_step": "none"}
+    },
+    {
+      "id": "p10",
+      "subject": "Re: Case #SHP-44602 - still waiting on invoice",
+      "messages": [
+        {"from": "Parcel Claims Team <claims@swiftparcel.example>", "date": "2026-09-15 10:00", "text": "Hi Sam, to process your claim for the lost package we need a copy of the purchase invoice. Please reply with it attached. Thanks, Daniel"},
+        {"from": "Parcel Claims Team <claims@swiftparcel.example>", "date": "2026-09-22 08:30", "text": "Hi Sam, just a reminder that we are still waiting on the invoice for case #SHP-44602. If we don't receive it within 48 hours the case will be closed and no compensation can be paid. Thanks, Daniel"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "follow_up", "workflow": "purchases", "next_step": "send_document"}
+    },
+
+    {
+      "id": "e01",
+      "subject": "Review request: PR #482 rate limiter",
+      "messages": [
+        {"from": "Jordan Lee <jordan@acme-eng.example>", "date": "2026-09-22 09:40", "text": "Hey Sam, could you review PR #482 (new token-bucket rate limiter) before standup tomorrow? You wrote the original middleware so you're the best person to check the edge cases. It's about 300 lines. Thanks!"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "engineering", "next_step": "review_or_decide"}
+    },
+    {
+      "id": "e02",
+      "subject": "[acme/api] CI passed: feature/cache-headers",
+      "messages": [
+        {"from": "GitHub <notifications@github.example>", "date": "2026-09-22 10:05", "text": "All checks have passed on branch feature/cache-headers. 142 tests passed, 0 failed. View workflow run #8812."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "engineering", "next_step": "none"}
+    },
+    {
+      "id": "e03",
+      "subject": "[PAGE] api-gateway error rate 12% - you are primary on-call",
+      "messages": [
+        {"from": "PagerAlert <alerts@pageralert.example>", "date": "2026-09-22 10:52", "text": "TRIGGERED: api-gateway 5xx error rate is 12.3% (threshold 2%) for the last 10 minutes. You are the primary on-call engineer. Acknowledge this incident and begin investigation. Runbook: https://wiki.acme-eng.example/runbooks/api-gateway"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "engineering", "next_step": "complete_task"}
+    },
+    {
+      "id": "e04",
+      "subject": "Re: Design doc - event bus migration",
+      "messages": [
+        {"from": "Sam Taylor <sam@example.com>", "date": "2026-09-21 15:00", "text": "Hi Chen, I've updated the design doc with the rollback plan and the cost estimate you asked for. Let me know if anything else is needed."},
+        {"from": "Chen Wu <chen@acme-eng.example>", "date": "2026-09-21 17:20", "text": "Looks great, thanks Sam. No further changes needed - I'll mark it approved."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "acknowledgement", "workflow": "engineering", "next_step": "none"}
+    },
+    {
+      "id": "e05",
+      "subject": "Re: Migration script ETA?",
+      "messages": [
+        {"from": "Riya Patel <riya@acme-eng.example>", "date": "2026-09-17 11:00", "text": "Hi Sam, do you have an ETA for the user-table migration script? QA needs it to plan the test run."},
+        {"from": "Riya Patel <riya@acme-eng.example>", "date": "2026-09-22 09:10", "text": "Bumping this - the release is Thursday and QA is blocked until we know when the script will be ready. Can you give me a date today?"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "follow_up", "workflow": "engineering", "next_step": "reply"}
+    },
+    {
+      "id": "e06",
+      "subject": "Backend Weekly #214: Postgres 19 features, queue patterns",
+      "messages": [
+        {"from": "Backend Weekly <newsletter@backendweekly.example>", "date": "2026-09-22 07:00", "text": "This week: what's new in Postgres 19, five queue patterns every backend engineer should know, and a deep dive into connection pooling. Plus jobs and events."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "engineering", "next_step": "none"}
+    },
+    {
+      "id": "e07",
+      "subject": "Architecture review moved to Thursday 3pm",
+      "messages": [
+        {"from": "Chen Wu <chen@acme-eng.example>", "date": "2026-09-21 13:00", "text": "Hi all, FYI the architecture review has moved from Wednesday to Thursday 3pm, same room. The calendar invite is updated. Nothing else changes."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "engineering", "next_step": "none"}
+    },
+    {
+      "id": "e08",
+      "subject": "1:1 with new intern",
+      "messages": [
+        {"from": "Chen Wu <chen@acme-eng.example>", "date": "2026-09-22 08:45", "text": "Hi Sam, Aisha (our new intern) starts on your team this week. Could you pick a 30-minute slot for an intro 1:1 before Friday and send her an invite? Thanks!"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "engineering", "next_step": "schedule"}
+    },
+    {
+      "id": "e09",
+      "subject": "Re: Can you merge the hotfix?",
+      "messages": [
+        {"from": "Jordan Lee <jordan@acme-eng.example>", "date": "2026-09-21 16:00", "text": "Sam, the hotfix for the login redirect is approved. Can you merge it when you get a chance?"},
+        {"from": "Sam Taylor <sam@example.com>", "date": "2026-09-21 16:25", "text": "Done - merged and deployed to production. Monitoring looks clean."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "engineering", "next_step": "none"}
+    },
+    {
+      "id": "e10",
+      "subject": "Your personal access token expires in 3 days",
+      "messages": [
+        {"from": "GitHub <noreply@github.example>", "date": "2026-09-22 05:00", "text": "Your personal access token 'deploy-bot' will expire on September 25. If this token is still needed, regenerate it to avoid disruption to any scripts or integrations that use it."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": false, "kind": "new_request", "workflow": "engineering", "next_step": "complete_task"}
+    },
+    {
+      "id": "e11",
+      "subject": "Re: Staging database access",
+      "messages": [
+        {"from": "Tom Becker <tom@acme-eng.example>", "date": "2026-09-21 10:00", "text": "Hi Sam, can you give me read access to the staging database?"},
+        {"from": "Sam Taylor <sam@example.com>", "date": "2026-09-21 11:30", "text": "Done, you should have read access now."},
+        {"from": "Tom Becker <tom@acme-eng.example>", "date": "2026-09-22 09:55", "text": "Thanks, that works! One more thing - I also need write access to the 'experiments' schema for the A/B test backfill. Could you add that too? I'm hoping to run it this afternoon."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "engineering", "next_step": "complete_task"}
+    },
+
+    {
+      "id": "u01",
+      "subject": "SOP draft - please send by Friday",
+      "messages": [
+        {"from": "Ms. Nandini Rao (Counsellor) <nandini@brightpath-counselling.example>", "date": "2026-09-21 18:00", "text": "Hi Sam, please send me your final Statement of Purpose draft by Friday so I have the weekend to review it before the early deadline. A Word or Google Doc link is fine. Best, Nandini"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "university_counselling", "next_step": "send_document"}
+    },
+    {
+      "id": "u02",
+      "subject": "Application received - Graduate Admissions",
+      "messages": [
+        {"from": "Northfield University Admissions <no-reply@northfield.example>", "date": "2026-09-19 12:00", "text": "Thank you for submitting your application to the MS in Computer Science program. Your application ID is NF-2027-11842. You can track your status in the applicant portal. This is an automated message."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "acknowledgement", "workflow": "university_counselling", "next_step": "none"}
+    },
+    {
+      "id": "u03",
+      "subject": "Re: Transcripts",
+      "messages": [
+        {"from": "Sam Taylor <sam@example.com>", "date": "2026-09-20 10:00", "text": "Hi Nandini, attached are my official transcripts from both universities."},
+        {"from": "Ms. Nandini Rao (Counsellor) <nandini@brightpath-counselling.example>", "date": "2026-09-20 14:30", "text": "Got them, thank you Sam! Everything looks in order."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "acknowledgement", "workflow": "university_counselling", "next_step": "none"}
+    },
+    {
+      "id": "u04",
+      "subject": "Incomplete application: English proficiency score missing",
+      "messages": [
+        {"from": "Lakeside University Graduate Office <gradoffice@lakeside.example>", "date": "2026-09-21 09:00", "text": "Dear applicant, your application (ID LK-88213) is missing an English proficiency test score (TOEFL or IELTS). Please upload your score report in the applicant portal by October 1. Incomplete applications will not be reviewed."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": false, "kind": "new_request", "workflow": "university_counselling", "next_step": "send_document"}
+    },
+    {
+      "id": "u05",
+      "subject": "Tomorrow's session: scholarship essays",
+      "messages": [
+        {"from": "Ms. Nandini Rao (Counsellor) <nandini@brightpath-counselling.example>", "date": "2026-09-22 08:00", "text": "Hi Sam, reminder that our scholarship essay session is tomorrow at 5pm. Before then, please prepare a list of the 3 scholarships you want to prioritise so we can plan the essays together."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "university_counselling", "next_step": "complete_task"}
+    },
+    {
+      "id": "u06",
+      "subject": "Join our virtual open house - Oct 8",
+      "messages": [
+        {"from": "Westbrook University <events@westbrook.example>", "date": "2026-09-20 15:00", "text": "Discover graduate programs at Westbrook! Join our virtual open house on October 8 to meet faculty and current students. Register now to reserve your spot."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "university_counselling", "next_step": "none"}
+    },
+    {
+      "id": "u07",
+      "subject": "Mock interview - which slot works?",
+      "messages": [
+        {"from": "Ms. Nandini Rao (Counsellor) <nandini@brightpath-counselling.example>", "date": "2026-09-22 10:15", "text": "Hi Sam, for the mock admissions interview, which works better for you: Tuesday Sep 29 at 10am or Wednesday Sep 30 at 2pm? Let me know and I'll book it."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "university_counselling", "next_step": "schedule"}
+    },
+    {
+      "id": "u08",
+      "subject": "Recommendation letter submitted",
+      "messages": [
+        {"from": "Prof. Alan Moore <amoore@citycollege.example>", "date": "2026-09-21 20:00", "text": "Hi Sam, just letting you know I've submitted my recommendation letter to all three programs. Best of luck with your applications!"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "university_counselling", "next_step": "none"}
+    },
+
+    {
+      "id": "w01",
+      "subject": "Final headcount and menu selection",
+      "messages": [
+        {"from": "Golden Spoon Catering <events@goldenspoon.example>", "date": "2026-09-21 12:00", "text": "Hi Sam, please confirm the final guest headcount and your menu choice (Option A: vegetarian thali, Option B: mixed grill) by September 25. We need this to order ingredients. Thank you! - Farah"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "wedding_planning", "next_step": "reply"}
+    },
+    {
+      "id": "w02",
+      "subject": "Invoice #2 - wedding photography",
+      "messages": [
+        {"from": "Lens & Light Studio <hello@lenslight.example>", "date": "2026-09-20 10:00", "text": "Hi Sam, attached is invoice #2 for your wedding photography package. The second installment of $800 is due October 5. You can pay by bank transfer or card using the link in the invoice. - Marco"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "wedding_planning", "next_step": "pay"}
+    },
+    {
+      "id": "w03",
+      "subject": "Deposit received - thank you!",
+      "messages": [
+        {"from": "Riverside Gardens Venue <bookings@riversidegardens.example>", "date": "2026-09-19 09:00", "text": "Dear Sam, we have received your deposit of $2,000. Your date of December 12 is now confirmed. We look forward to hosting your celebration!"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "acknowledgement", "workflow": "wedding_planning", "next_step": "none"}
+    },
+    {
+      "id": "w04",
+      "subject": "Invitation designs - pick one tonight?",
+      "messages": [
+        {"from": "Alex Morgan <alex.morgan@example.com>", "date": "2026-09-22 11:00", "text": "Hey love, the printer sent 3 invitation designs (attached). They need our pick by tomorrow morning to print on time. Can you look tonight and tell me which one you like? I'm leaning towards #2."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "wedding_planning", "next_step": "review_or_decide"}
+    },
+    {
+      "id": "w05",
+      "subject": "Autumn blooms are here",
+      "messages": [
+        {"from": "Petal Studio <news@petalstudio.example>", "date": "2026-09-21 07:00", "text": "Dahlias, chrysanthemums and warm-toned roses - our autumn collection is here. Book a free consultation for your event and get 10% off centrepieces."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "wedding_planning", "next_step": "none"}
+    },
+    {
+      "id": "w06",
+      "subject": "SO EXCITED!!",
+      "messages": [
+        {"from": "Cousin Leena <leena@example.com>", "date": "2026-09-21 22:00", "text": "Just booked my flights for your wedding!! Can't wait to see you both in December 🎉🎉"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "wedding_planning", "next_step": "none"}
+    },
+    {
+      "id": "w07",
+      "subject": "RSVP",
+      "messages": [
+        {"from": "Mark and Julie Chen <mjchen@example.com>", "date": "2026-09-20 18:00", "text": "Hi Sam, happy to say we'll both be there! 2 guests. Congratulations again!"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "wedding_planning", "next_step": "none"}
+    },
+    {
+      "id": "w08",
+      "subject": "Re: Music lists",
+      "messages": [
+        {"from": "DJ Kiran <kiran@beatsbykiran.example>", "date": "2026-09-10 12:00", "text": "Hi Sam, when you get a chance please send your must-play and do-not-play song lists."},
+        {"from": "DJ Kiran <kiran@beatsbykiran.example>", "date": "2026-09-21 12:00", "text": "Just checking in again - I still need your must-play and do-not-play lists so I can prepare the set. A simple doc or spreadsheet is fine!"}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "follow_up", "workflow": "wedding_planning", "next_step": "send_document"}
+    },
+    {
+      "id": "w09",
+      "subject": "Updated wedding day timeline (for your records)",
+      "messages": [
+        {"from": "Nina (Wedding Planner) <nina@everafterplanning.example>", "date": "2026-09-21 16:00", "text": "Hi Sam, attached is the updated timeline with the new ceremony start time of 4pm. This is just for your records - no action needed on your side. Nina"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "wedding_planning", "next_step": "none"}
+    },
+
+    {
+      "id": "o01",
+      "subject": "Plumber visit Thursday",
+      "messages": [
+        {"from": "Greg (Landlord) <greg.property@example.com>", "date": "2026-09-22 08:20", "text": "Hi Sam, the plumber is coming Thursday at 10am to fix the kitchen leak. Can someone be home to let him in? If not, let me know and I'll use my key. Please reply by tomorrow."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "other", "next_step": "reply"}
+    },
+    {
+      "id": "o02",
+      "subject": "Your September statement is ready",
+      "messages": [
+        {"from": "Maple Bank <statements@maplebank.example>", "date": "2026-09-21 06:00", "text": "Your checking account statement for September is now available in online banking. This is an automated notification."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "other", "next_step": "none"}
+    },
+    {
+      "id": "o03",
+      "subject": "Dinner Saturday?",
+      "messages": [
+        {"from": "Ben Carter <ben.carter@example.com>", "date": "2026-09-21 20:30", "text": "Hey! A few of us are doing dinner at that new Thai place on Saturday around 7. You in? Need to book the table by Thursday."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "other", "next_step": "reply"}
+    },
+    {
+      "id": "o04",
+      "subject": "Appointment reminder: tomorrow 9:00 AM",
+      "messages": [
+        {"from": "Smile Dental <reminders@smiledental.example>", "date": "2026-09-22 09:00", "text": "Reminder: you have a dental cleaning tomorrow, Sep 23 at 9:00 AM with Dr. Kim. Please reply C to confirm or R to reschedule. Unconfirmed appointments may be released."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": false, "kind": "new_request", "workflow": "other", "next_step": "reply"}
+    },
+    {
+      "id": "o05",
+      "subject": "Documents needed for your tax return",
+      "messages": [
+        {"from": "Hannah Ortiz, CPA <hannah@ortiztax.example>", "date": "2026-09-18 11:00", "text": "Hi Sam, to finish your extended return (due October 15) I still need your brokerage 1099 and the receipt for your home office equipment. Please upload them to the client portal when you can."}
+      ],
+      "label": {"actionable": true, "waiting_on_me": true, "kind": "new_request", "workflow": "other", "next_step": "send_document"}
+    },
+    {
+      "id": "o06",
+      "subject": "You're pre-approved for the Platinum Card",
+      "messages": [
+        {"from": "Apex Card Offers <offers@apexcard.example>", "date": "2026-09-21 05:00", "text": "Congratulations Sam! You're pre-approved for the Apex Platinum Card with 60,000 bonus points. Apply in minutes - this offer expires soon."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "other", "next_step": "none"}
+    },
+    {
+      "id": "o07",
+      "subject": "Your membership renews next month",
+      "messages": [
+        {"from": "FitLife Gym <members@fitlife.example>", "date": "2026-09-20 08:00", "text": "Your annual membership will automatically renew on October 20 at $480. No action is needed to keep your membership. To make changes, visit the front desk."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "other", "next_step": "none"}
+    },
+    {
+      "id": "o08",
+      "subject": "Leftover lunch in the 4th floor kitchen",
+      "messages": [
+        {"from": "Office Team <office@acme-eng.example>", "date": "2026-09-22 13:00", "text": "Hi all, there are leftover sandwiches and salads from the client lunch in the 4th floor kitchen. Help yourselves!"}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "information", "workflow": "other", "next_step": "none"}
+    },
+    {
+      "id": "o09",
+      "subject": "[Neighborhood Forum] Daily digest - 12 new posts",
+      "messages": [
+        {"from": "Neighborhood Forum <digest@nbforum.example>", "date": "2026-09-22 06:30", "text": "Today's top posts: Lost cat on Elm Street, Farmers market this weekend, Road closure on 5th Ave, Recommendations for a good electrician, and 8 more."}
+      ],
+      "label": {"actionable": false, "waiting_on_me": false, "kind": "promotional", "workflow": "other", "next_step": "none"}
+    }
+  ]
+}

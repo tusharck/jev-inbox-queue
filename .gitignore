@@ -1,0 +1,13 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Local data: Jev's cached answers and generated pages
+.cache/
+out/
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
